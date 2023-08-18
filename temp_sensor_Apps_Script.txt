@@ -1,0 +1,18 @@
+var sheet_id = "YOUR GOOGLE SHEET ID HERE";
+var sheet_name = "Sheet1";
+function doGet(e){
+var ss = SpreadsheetApp.openById(sheet_id);
+var sheet = ss.getSheetByName(sheet_name);
+var temperature = Number(e.parameter.temperature);
+/** 
+if (temperature > 90){
+  MailApp.sendEmail("itsupport@phamatech.com",
+                  "Server Room Temperature High",
+                  "Server Room Temperature is Above 90 Degrees");
+} 
+**/
+temperature = temperature + " F";
+var humidity = Number(e.parameter.humidity) + " % Humidity";
+var now = new Date();
+sheet.appendRow([now,temperature,humidity]);
+}
