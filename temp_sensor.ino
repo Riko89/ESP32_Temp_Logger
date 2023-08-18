@@ -9,10 +9,10 @@
 DHT dht_sensor(DHT_SENSOR_PIN, DHT_SENSOR_TYPE);
 
 // WiFi credentials
-const char* ssid = "mango1";  // Enter SSID here
-const char* password = "freemango4u"; //password here
+const char* ssid = "Your Wifi Network Here";  // Enter SSID here
+const char* password = "Your Wifi password Here"; //password here
 // Google script ID and required credentials
-String GOOGLE_SCRIPT_ID = "AKfycbyaNLxim-lAIIFrixsy7dlQp1wTaCBHyt9-1Pqg-JvRUma6IpJ-zNttcEBIa3WDMrps";    // change Gscript ID
+String GOOGLE_SCRIPT_ID = "-------  GOOGLE APPS SCRIPT ID HERE ----------";    // change Gscript ID
 void setup() {
   delay(1000);
   Serial.begin(115200);
